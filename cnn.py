@@ -37,6 +37,14 @@ classifier.add(Dense(units=128, activation = 'relu'))
 classifier.add(Dense(units=1, activation = 'sigmoid'))
 # classifier.summary()
 
+# Compiling CNN
+classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+
+
+
+
+
 
 
 
