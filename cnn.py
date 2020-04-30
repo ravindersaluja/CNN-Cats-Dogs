@@ -14,4 +14,6 @@ from keras.layers import Flatten
 from keras.layers import Dense
 
 classfier = Sequential()
-
+# input_shape (Reducing the shape because using CPU and not GPU, so (64,64,3), 3 being the channels - RGB)
+# Channels last because using tensorflow backend.
+classifier.add(Conv2D(filters=32, kernel_size=(3,3), input_shape=(64,64,3)), activation='relu')
