@@ -24,7 +24,20 @@ classifier.add(Conv2D(filters=32, kernel_size=(3,3), input_shape=(64,64,3), acti
 
 # Adding the Pooling layer
 # Adding the max pooling layer to decrease the number of nodes in the future fully connected layers
-classfier.add(MaxPooling2D(pool_size=(2,2)))
+classifier.add(MaxPooling2D(pool_size=(2,2)))
 
 # Flatenning
 classifier.add(Flatten())
+
+# Full connection
+# units = hidden nodes in the hidden layer 128-not too big not too small and taking pow of 2.
+# Input layer
+classifier.add(Dense(units=128, activation = 'relu'))
+# Output layer
+classifier.add(Dense(units=1, activation = 'sigmoid'))
+# classifier.summary()
+
+
+
+
+
